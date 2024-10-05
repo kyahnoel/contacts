@@ -1,0 +1,46 @@
+<mat-dialog-content>
+    <h3>Add Contact</h3>
+
+    <form [formGroup]="contacts">
+        <mat-form-field class="form-inputs">
+            <mat-label>Name</mat-label>
+            <input matInput type="text" id="name" formControlName="name" required />
+    
+            <mat-error *ngIf="contacts.get('name')!.hasError('name') && !contacts.get('email')!.hasError('required')">
+                Please enter a valid Name
+            </mat-error>
+            <mat-error *ngIf="contacts.get('name')!.hasError('required')">
+                Name is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field class="form-inputs">
+            <mat-label>Contact</mat-label>
+            <input matInput type="text" id="contact" formControlName="contact" maxlength="11" required />
+    
+            <mat-error *ngIf="contacts.get('contact')!.hasError('contact') && !contacts.get('contacts')!.hasError('required')">
+                Please enter a valid Contact
+            </mat-error>
+            <mat-error *ngIf="contacts.get('contact')!.hasError('required')">
+                Contact is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field class="form-inputs">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" id="email" formControlName="email" required />
+    
+            <mat-error *ngIf="contacts.get('email')!.hasError('email') && !contacts.get('email')!.hasError('required')">
+                Please enter a valid email address
+            </mat-error>
+            <mat-error *ngIf="contacts.get('email')!.hasError('required')">
+                Email is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+    </form>
+
+</mat-dialog-content>
+
+<div mat-dialog-actions>
+    <button mat-button (click)="onCancel()" color="warn">Cancel</button>
+    <button mat-button *ngIf="!this.data" (click)="onAdd()" [disabled]="this.contacts.invalid" color="primary">Add</button>
+    <button mat-button *ngIf="this.data" (click)="onUpdate()" [disabled]="this.contacts.invalid" color="primary">Update</button>
+</div>

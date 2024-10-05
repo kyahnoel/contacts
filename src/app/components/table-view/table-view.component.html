@@ -1,0 +1,19 @@
+<div class="table-items">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Contact</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+        <tr *ngFor="let item of this.contacts">
+            <td>{{ item.name | capitalizeFirst }}</td>
+            <td>{{ item.contact }}</td>
+            <td>{{ item.email }}</td>
+            <td>
+                <button (click)="editContact(item)">edit</button>
+                <button (click)="deleteContact(item)">delete</button>
+            </td>
+        </tr>
+    </table>
+</div>

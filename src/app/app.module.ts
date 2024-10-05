@@ -1,16 +1,43 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+
+import { MatDialogModule } from '@angular/material/dialog';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+
 import { AppComponent } from './app.component';
+import { HomeComponent } from './components/home/home.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { DynamicDialogComponent } from './components/shared/dynamic-dialog/dynamic-dialog.component';
+import { CapitalizeFirstPipe } from './pipe/capitalize-first.pipe';
+import { CardViewComponent } from './components/card-view/card-view.component';
+import { TableViewComponent } from './components/table-view/table-view.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    NotFoundComponent,
+    DynamicDialogComponent,
+    CapitalizeFirstPipe,
+    CardViewComponent,
+    TableViewComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    CommonModule,
+    AppRoutingModule,
+    MatDialogModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatButtonModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

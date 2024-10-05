@@ -1,0 +1,13 @@
+<div class="contact-items">
+    <div class="card-contact" *ngFor="let item of this.contacts">
+        <div class="card-actions">
+            <button (click)="editContact(item)">edit</button>
+            <button (click)="deleteContact(item)">delete</button>
+        </div>
+        <div>
+            <p>{{ item.name | capitalizeFirst }}</p>
+        </div>
+        <p>{{ item.contact }}</p>
+        <p>{{ item.email }}</p>
+    </div>    
+</div>
