@@ -1,38 +1,51 @@
 .contact-body {
+    margin: 0;
+    padding: 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    h3 {
-        width: 61%;
-    }
+    justify-content: center; 
+    align-items: center; 
+}
+.contact-container{
+    width: 60%; 
+    max-width: 1200px; 
+    padding: 20px; 
+    background-color: #fff; 
 }
 
 .contact-content {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
 
     .contact-description{
-        width: 50%;
-        margin: 0 2rem 2rem 2rem;
-
+        width: 55%;
         p{
-            width: 80%;
+            line-height: 25px;
         }
     }
 
     .contact-add {
-        margin: 2rem;
+        display: flex;
+        align-items: center;
     }
 
+}
+
+.button-add {
+    background-color: #A100FF;
+    border-radius: 25px;
+    padding: 0 20px 0 20px;
 }
 
 .contact-view {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    width: 81%;
-    margin: 1rem;
+    margin: 1vh 0vh 1vh 1vh;
+
+    span {
+        margin: 5px;
+        cursor: pointer;
+    }
 }
 

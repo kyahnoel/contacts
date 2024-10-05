@@ -1,6 +1,6 @@
 <div class="table-items">
-    <table>
-        <tr>
+    <table width="100%">
+        <tr class="table-head">
             <th>Name</th>
             <th>Contact</th>
             <th>Email</th>
@@ -10,9 +10,9 @@
             <td>{{ item.name | capitalizeFirst }}</td>
             <td>{{ item.contact }}</td>
             <td>{{ item.email }}</td>
-            <td>
-                <button (click)="editContact(item)">edit</button>
-                <button (click)="deleteContact(item)">delete</button>
+            <td class="table-actions">
+                <span (click)="editContact(item)" class="material-icons">edit</span>
+                <span (click)="deleteContact(item)" class="material-icons">delete</span>
             </td>
         </tr>
     </table>

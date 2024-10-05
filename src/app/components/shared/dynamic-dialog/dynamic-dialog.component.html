@@ -1,6 +1,4 @@
 <mat-dialog-content>
-    <h3>Add Contact</h3>
-
     <form [formGroup]="contacts">
         <mat-form-field class="form-inputs">
             <mat-label>Name</mat-label>
@@ -37,10 +35,9 @@
         </mat-form-field>
     </form>
 
+    <div mat-dialog-actions class="dialog-actions">
+        <button mat-button ngClass="button-cancel" (click)="onCancel()">Cancel</button>
+        <button mat-button *ngIf="!this.data" ngClass="button-add" (click)="onAdd()" [disabled]="this.contacts.invalid">Add Contact</button>
+        <button mat-button *ngIf="this.data" ngClass="button-save-changes" (click)="onUpdate()" style="color: white;" [disabled]="this.contacts.invalid">Save Changes</button>
+    </div>
 </mat-dialog-content>
-
-<div mat-dialog-actions>
-    <button mat-button (click)="onCancel()" color="warn">Cancel</button>
-    <button mat-button *ngIf="!this.data" (click)="onAdd()" [disabled]="this.contacts.invalid" color="primary">Add</button>
-    <button mat-button *ngIf="this.data" (click)="onUpdate()" [disabled]="this.contacts.invalid" color="primary">Update</button>
-</div>

@@ -1,55 +1,24 @@
+
 <div class="contact-body">
-    <h3>
-        Contact List
-    </h3>
-    <div class="contact-content">
-        <div class="contact-description">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam minus ipsam illum dignissimos modi expedita rerum, aliquid inventore maiores facere officiis vero nostrum laboriosam quasi soluta nulla suscipit animi quis.</p>
+    <div class="contact-container">
+        <h3>
+            Contacts Information
+        </h3>
+        <div class="contact-content">
+            <div class="contact-description">
+                <p>Your list of contacts appear here. To add a new contact, click on the Add New Contact button.</p>
+            </div>
+            <div class="contact-add">
+                <button ngClass="button-add" mat-button style="color: white;" (click)="addContact()">Add New Contact</button>
+            </div>
         </div>
-        <div class="contact-add">
-            <button aria-labeled="Create Contact" (click)="addContact()">Create Contact</button>
+    
+        <div class="contact-view">
+            <span (click)="triggerDisplay('card')" [style]="{opacity: this.contactView == 'card' ? .3: 1}" class="material-icons">grid_view</span>
+            <span (click)="triggerDisplay('table')" [style]="{opacity: this.contactView == 'table' ? .3: 1}" class="material-icons">table_rows</span>
         </div>
+        
+        <app-card-view [style]="{ display: this.contactView !== 'card' ? 'none':'' }"></app-card-view>
+        <app-table-view [style]="{ display: this.contactView !== 'table' ? 'none' :'' }"></app-table-view>
     </div>
-
 </div>
-<div class="contact-view">
-    <button (click)="triggerDisplay('card')">card view</button>
-    <button (click)="triggerDisplay('table')">table view</button>
-</div>
-
-<app-card-view [style]="{ display: this.contactView !== 'card' ? 'none':'' }"></app-card-view>
-<app-table-view [style]="{ display: this.contactView !== 'table' ? 'none' :'' }"></app-table-view>
-
-<!-- <div class="contact-items" [style]="{ display: this.contactView !== 'card' ? 'none':'' }">
-    <div class="card-contact" *ngFor="let item of this.contacts">
-        <div class="card-actions">
-            <button (click)="editContact(item)">edit</button>
-            <button (click)="deleteContact(item)">delete</button>
-        </div>
-        <div>
-            <p>{{ item.name | capitalizeFirst }}</p>
-        </div>
-        <p>{{ item.contact }}</p>
-        <p>{{ item.email }}</p>
-    </div>    
-</div>
-
-<div class="table-items" [style]="{ display: this.contactView !== 'table' ? 'none' :'' }">
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Contact</th>
-            <th>Email</th>
-            <th>Actions</th>
-        </tr>
-        <tr *ngFor="let item of this.contacts">
-            <td>{{ item.name | capitalizeFirst }}</td>
-            <td>{{ item.contact }}</td>
-            <td>{{ item.email }}</td>
-            <td>
-                <button (click)="editContact(item)">edit</button>
-                <button (click)="deleteContact(item)">delete</button>
-            </td>
-        </tr>
-    </table>
-</div> -->

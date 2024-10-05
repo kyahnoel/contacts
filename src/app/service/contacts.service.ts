@@ -12,7 +12,7 @@ export class ContactsService {
     private http: HttpClient
   ) { }
 
-  url = 'http://localhost:3000/contacts';
+  url = 'http://localhost:3200/contacts';
 
   getAllContacts(): Observable<Contact[]> {
     return this.http.get<Contact[]>(this.url);

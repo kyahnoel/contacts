@@ -3,20 +3,37 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    margin-left: 19%;
-    margin-right: 15%;
 }
 
 .card-contact {
-    background-color: rgb(239, 245, 250);
     border: 1px solid rgb(214, 230, 245);
-    border-radius: 4px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px 1px rgb(221, 222, 222);
     padding: 2vh;
-    margin: 5px;
-    width: calc(100% / 4);
+    margin: 10px 10px 10px 0px;
+    min-width: calc(86% / 3);
 }
-.card-actions {
+.card-head {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center; 
+    margin-top: -15px;
+    margin-bottom: -15px;
+
+    p{
+        font-weight: calc(700 * 0.8);
+    }
+}
+.card-actions {
+    span {
+        margin: 5px;
+        cursor: pointer;
+        font-size: large;
+    }
+}
+.card-content{
+    p{
+        font-size: small;
+    }
 }

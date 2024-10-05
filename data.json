@@ -2,7 +2,7 @@
   "contacts": [
     {
       "id": "b0b7",
-      "name": "noel rotersos jr",
+      "name": "noel rotersos",
       "contact": "09692388264",
       "email": "itnoel14@gmail.com"
     },
@@ -11,6 +11,24 @@
       "name": "neil tacatani",
       "contact": "09123123123",
       "email": "neil@mail.com"
+    },
+    {
+      "id": "0fab",
+      "name": "jaco mira",
+      "contact": "09234234234",
+      "email": "jaco@mail.com"
+    },
+    {
+      "id": "b095",
+      "name": "noel rotersos",
+      "contact": "09234234234",
+      "email": "noel@mail.com"
+    },
+    {
+      "id": "46a2",
+      "name": "john doe",
+      "contact": "09234234342",
+      "email": "john@mail.com"
     }
   ]
 }

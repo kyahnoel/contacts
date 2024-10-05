@@ -33,7 +33,7 @@ export class TableViewComponent {
 
   editContact(contact: Contact){
     const dialogRef = this.dialog.open(DynamicDialogComponent, {
-      width: '500px',
+      width: '350px',
       data: contact
     });
 
