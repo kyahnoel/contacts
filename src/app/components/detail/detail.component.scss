@@ -1,0 +1,46 @@
+.contact-body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+.contact-container{
+    width: 60%; 
+    max-width: 1200px; 
+    padding: 20px; 
+    background-color: #fff; 
+}
+
+.header {
+    display: flex;
+    align-items: center; 
+}
+  
+.icon-arrow {
+    margin-right: 2rem; 
+    font-size: 24px; 
+    cursor: pointer;
+}
+.card-contact-info {
+    border: 1px solid rgb(214, 230, 245);
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px 1px rgb(221, 222, 222);
+    padding: 2vh 5vh 5vh 5vh;
+    display: flex;
+    justify-content: space-between;
+    height: 70vh;
+
+    .contact-name, .contact-email, .contact-number {
+        line-height: 8px;
+
+        label {
+            font-size: 10px;
+            color: grey;
+        }
+        p {
+            font-weight: bold;
+        }
+    }
+
+}

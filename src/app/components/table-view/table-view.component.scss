@@ -7,6 +7,11 @@ table, th, td {
     text-align: left;
     flex: 1;
 }
+
+tbody tr:hover{
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
 .table-head{
     background-color: #490172;
     color: white;

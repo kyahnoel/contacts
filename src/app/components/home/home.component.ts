@@ -1,4 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
+import { Location } from '@angular/common';
+
 import { MatDialog } from '@angular/material/dialog';
 
 import { DynamicDialogComponent } from '../shared/dynamic-dialog/dynamic-dialog.component';
@@ -22,10 +24,14 @@ export class HomeComponent {
 
   constructor(
     public dialog: MatDialog,
-    private contactService: ContactsService
+    private contactService: ContactsService,
+    private location: Location
   ){}
 
   ngOnInit(): void {
+    this.location.subscribe((response) => {
+      console.log(response);
+    })
   }
 
   addContact(){

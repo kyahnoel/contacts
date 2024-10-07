@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Contact } from '../models/contact.model';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -18,11 +18,15 @@ export class ContactsService {
     return this.http.get<Contact[]>(this.url);
   }
 
+  getContact(id: string): Observable<Contact> {
+    return this.http.get<Contact>(`${this.url}/${id}`);
+  }
+
   addContact(data: Contact): Observable<Contact> {
     return this.http.post<Contact>(this.url, data);
   }
 
-  updateContact(id: number, data: Contact): Observable<Contact> {
+  updateContact(id: string, data: Contact): Observable<Contact> {
     return this.http.put<Contact>(`${this.url}/${id}`, data);
   }
 

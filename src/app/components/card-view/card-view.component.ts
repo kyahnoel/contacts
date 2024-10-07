@@ -1,8 +1,9 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { Contact } from 'src/app/models/contact.model';
 import { ContactsService } from 'src/app/service/contacts.service';
 import { MatDialog } from '@angular/material/dialog';
 import { DynamicDialogComponent } from '../shared/dynamic-dialog/dynamic-dialog.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card-view',
@@ -15,7 +16,8 @@ export class CardViewComponent {
 
   constructor(
     private dialog: MatDialog,
-    private contactService: ContactsService
+    private contactService: ContactsService,
+    public router: Router
   ){}
 
   ngOnInit(): void {

@@ -1,0 +1,22 @@
+<div class="contact-body">
+    <div class="contact-container">
+        <div class="header">
+            <span class="material-icons icon-arrow" (click)="this.router.navigate(['/home'])">arrow_back</span>
+            <h3>Contact Information</h3>
+        </div>
+        <div class="card-contact-info" >
+            <div class="contact-name">
+                <label for="">First Name</label>
+                <p>{{ contact.name | capitalizeFirst }}</p>
+            </div>
+            <div class="contact-email">
+                <label for="">Email Address</label>
+                <p>{{ contact.email }}</p>
+            </div>
+            <div class="contact-number">
+                <label for="">Contact Number</label>
+                <p>{{ contact.contact }}</p>
+            </div>
+        </div>
+    </div>
+</div>

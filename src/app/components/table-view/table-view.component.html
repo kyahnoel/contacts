@@ -6,14 +6,16 @@
             <th>Email</th>
             <th>Actions</th>
         </tr>
-        <tr *ngFor="let item of this.contacts">
-            <td>{{ item.name | capitalizeFirst }}</td>
-            <td>{{ item.contact }}</td>
-            <td>{{ item.email }}</td>
-            <td class="table-actions">
-                <span (click)="editContact(item)" class="material-icons">edit</span>
-                <span (click)="deleteContact(item)" class="material-icons">delete</span>
-            </td>
-        </tr>
+        <tbody>
+            <tr *ngFor="let item of this.contacts" [routerLink]="['/home', item.id]">
+                <td>{{ item.name | capitalizeFirst }}</td>
+                <td>{{ item.contact }}</td>
+                <td>{{ item.email }}</td>
+                <td class="table-actions">
+                    <span (click)="editContact(item)" class="material-icons">edit</span>
+                    <span (click)="deleteContact(item)" class="material-icons">delete</span>
+                </td>
+            </tr>
+        </tbody>
     </table>
 </div>

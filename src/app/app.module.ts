@@ -18,6 +18,7 @@ import { DynamicDialogComponent } from './components/shared/dynamic-dialog/dynam
 import { CapitalizeFirstPipe } from './pipe/capitalize-first.pipe';
 import { CardViewComponent } from './components/card-view/card-view.component';
 import { TableViewComponent } from './components/table-view/table-view.component';
+import { DetailComponent } from './components/detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { TableViewComponent } from './components/table-view/table-view.component
     DynamicDialogComponent,
     CapitalizeFirstPipe,
     CardViewComponent,
-    TableViewComponent
+    TableViewComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
