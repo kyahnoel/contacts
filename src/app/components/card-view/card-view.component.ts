@@ -32,7 +32,8 @@ export class CardViewComponent {
     })
   }
 
-  editContact(contact: Contact){
+  editContact(contact: Contact, e: Event){
+    e.stopPropagation();
     const dialogRef = this.dialog.open(DynamicDialogComponent, {
       width: '350px',
       data: contact
@@ -53,7 +54,8 @@ export class CardViewComponent {
     });
   }
 
-  deleteContact(contact: Contact){
+  deleteContact(contact: Contact, e: Event){
+    e.stopPropagation();
     if(!contact) return;
 
     const confirm = window.confirm('Delete Contact?');

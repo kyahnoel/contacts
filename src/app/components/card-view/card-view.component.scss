@@ -12,7 +12,13 @@
     padding: 2vh;
     margin: 10px 10px 10px 0px;
     min-width: calc(85% / 3);
+    cursor: pointer;
 }
+
+.card-contact:hover {
+    background-color: #f1f1f1;
+}
+
 .card-head {
     display: flex;
     flex-direction: row;

@@ -12,8 +12,8 @@
                 <td>{{ item.contact }}</td>
                 <td>{{ item.email }}</td>
                 <td class="table-actions">
-                    <span (click)="editContact(item)" class="material-icons">edit</span>
-                    <span (click)="deleteContact(item)" class="material-icons">delete</span>
+                    <span (click)="editContact(item, $event)" class="material-icons">edit</span>
+                    <span (click)="deleteContact(item, $event)" class="material-icons">delete</span>
                 </td>
             </tr>
         </tbody>

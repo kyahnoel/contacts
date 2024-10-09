@@ -1,22 +1,10 @@
 {
   "contacts": [
     {
-      "id": "b0b7",
-      "name": "noel rotersos",
-      "contact": "09692388264",
-      "email": "itnoel14@gmail.com"
-    },
-    {
       "id": "f9f6",
       "name": "neil tacatani",
       "contact": "09123123123",
       "email": "neil@mail.com"
-    },
-    {
-      "id": "0fab",
-      "name": "jaco mira",
-      "contact": "09234234234",
-      "email": "jaco@mail.com"
     },
     {
       "id": "b095",

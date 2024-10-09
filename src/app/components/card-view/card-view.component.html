@@ -3,8 +3,8 @@
         <div class="card-head">
             <p>{{ item.name | capitalizeFirst }}</p>
             <div class="card-actions">
-                <span (click)="editContact(item)" class="material-icons">edit</span>
-                <span (click)="deleteContact(item)" class="material-icons">delete</span>
+                <span (click)="editContact(item, $event)" class="material-icons">edit</span>
+                <span (click)="deleteContact(item,  $event)" class="material-icons">delete</span>
             </div>
         </div>
         <div class="card-content">
